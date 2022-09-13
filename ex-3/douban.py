@@ -5,7 +5,7 @@ import time
 import random
 headers = {
     'user-agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:104.0) Gecko/20100101 Firefox/104.0',
-    'Cookie':'写你自己的'
+    'Cookie':'bid=uVCFCfRVxyU; douban-fav-remind=1; _pk_ref.100001.8cb4=%5B%22%22%2C%22%22%2C1662375928%2C%22https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D0%26amp%3Bfilter%3D%22%5D; _pk_id.100001.8cb4=6f498f7e135ec15c.1661648117.2.1662375937.1661648117.; __gads=ID=90347103ece56c1e-22f7331a0ad600d4:T=1661648119:RT=1661648119:S=ALNI_Maa3BiDefHQajU-1m-p5Y1iR-nomw; __gpi=UID=0000092563cc11d5:T=1661648119:RT=1662360877:S=ALNI_MaE82R6KkwgLCXrbdd8in_zDQRMzg; __utma=30149280.491179232.1661648120.1662373962.1662375799.5; __utmz=30149280.1662375799.5.4.utmcsr=accounts.douban.com|utmccn=(referral)|utmcmd=referral|utmcct=/; __utmc=30149280; ap_v=0,6.0; dbcl2="219156133:iUxxJVBd6NI"; ck=MU1f; __utmb=30149280.8.10.1662375799; push_noty_num=0; push_doumail_num=0; _pk_ses.100001.8cb4=*; __utmt=1; __utmv=30149280.21915; ct=y'
 }
 
 # 不同的代理IP,代理ip的类型必须和请求url的协议头保持一致
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     for url in urls:
         html = get_html(url)
         # print(html)
-        datas = download_image(html)
+        download_image(html)
     # 自己测试
     # with open('豆瓣电影 Top 250.html') as fp:
     #     html1=fp.read()

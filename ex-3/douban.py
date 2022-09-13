@@ -4,8 +4,7 @@ import os
 import time
 import random
 headers = {
-    'user-agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:104.0) Gecko/20100101 Firefox/104.0',
-    'Cookie':'写你自己的'
+    'user-agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:104.0) Gecko/20100101 Firefox/104.0'
 }
 
 # 不同的代理IP,代理ip的类型必须和请求url的协议头保持一致

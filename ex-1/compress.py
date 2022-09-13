@@ -1,5 +1,3 @@
-
-
 from PIL import Image
 import os
 
@@ -40,6 +38,7 @@ def get_outfile(infile, outfile):
     outfile = '{}-out{}'.format(dir, suffix)
     return outfile
 
+
 def compress_image(infile, outfile='', mb=180, step=10, quality=80):
     """不改变图片尺寸压缩到指定大小
     :param infile: 压缩源文件
@@ -62,6 +61,7 @@ def compress_image(infile, outfile='', mb=180, step=10, quality=80):
         o_size = get_size(outfile)
     return outfile, get_size(outfile)
 
+
 def resize_image(infile, outfile='', x_s=1376):
     """修改图片尺寸
     :param infile: 图片源文件
@@ -77,6 +77,16 @@ def resize_image(infile, outfile='', x_s=1376):
     out.save(outfile)
 
 
+def all_path(dirname):
+    result = []
+    for maindir, subdir, file_name_list in os.walk(dirname):
+        for filename in file_name_list:
+            apath = os.path.join(maindir, filename)
+            result.append(apath)
+    return result
+
+
 if __name__ == '__main__':
-    compress_image(r'C:\Users\xixi\Desktop\微信图片_20220901194237.jpg')
-    resize_image(r'C:\Users\xixi\Desktop\微信图片_20220901194237.jpg')
+    for p in all_path("C:\\Users\\xixi\\Downloads\\output"):
+        compress_image(p)
+        resize_image(p)

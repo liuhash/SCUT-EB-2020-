@@ -17,3 +17,18 @@ wb binary 二进制数据。
 怎么拿到cookie自己搜。\
 b4soup参考文献\
 https://blog.csdn.net/jgdabc/article/details/114283174
+实例化etree对象 xpath\
+from lxml import etree\
+etree.parse本地文件\
+etree.HTML网页加载\
+xpath获取\
+1.实例化对象\
+2.定位\
+属性定位\
+位置定位\
+数据提取\
+text()\
+@herf\
+xpath参考文献。58同城案例\
+https://blog.csdn.net/Tom197/article/details/119322307
+

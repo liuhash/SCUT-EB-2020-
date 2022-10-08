@@ -41,4 +41,3 @@ for td in td_list:
         fp = open(dir_name+'/'+title+'.txt', 'w', encoding='utf-8')
         fp.write(title + ":" + i.group('li') + '\n')
         print(title, '成功')
-fp.close()

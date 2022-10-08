@@ -32,3 +32,8 @@ text()\
 xpath参考文献。58同城案例\
 https://blog.csdn.net/Tom197/article/details/119322307
 
+模拟浏览器登录->处理cookie
+防盗链处理
+代理->防止IP被封
+
+综合训练 爬取网易云音乐。使用加密

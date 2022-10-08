@@ -5,10 +5,13 @@ import pandas as pd
 headers = {
     'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62'
 }
-
+# 定义url
 url = 'https://gz.58.com/ershoufang/'
+# 发起请求，获得HTML页面源码
 page_text = requests.get(url=url,headers=headers).text
 # print(page_text)
+
+# 加载进etree中进行页面解析
 tree = etree.HTML(page_text)
 div_list = tree.xpath('//div[@class="property-content"]')
 data=[]*7
@@ -21,7 +24,7 @@ for i in div_list:
     # print(address)
     total_price = i.xpath('./div[2]/p/span[1]/text()')[0]+i.xpath('./div[2]/p/span[2]/text()')[0]
     average_price=i.xpath('./div[2]/p[2]/text()')[0]
-    area=str(i.xpath('./div[1]/section/div[1]/p[2]/text()')[0]).strip()
+    area=str(i.xpath('./div[1]/section/div[1]/p[2]/text()')[0]).strip() # 移除头尾字符
     # print(area)
     # print(average_price)
     # room_type=""
